@@ -23,7 +23,7 @@ namespace TWChinaApi.Controllers
         {
             var result = CommonMark.CommonMarkConverter.Convert(
                 @"
-this is head
+this is head of taotao
 ===
 
 # h1
@@ -40,7 +40,7 @@ this is head
 common text bold
 ");
 
-            var httpResponseMessage = new HttpResponseMessage(HttpStatusCode.Forbidden)
+            var httpResponseMessage = new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(result, Encoding.UTF8, "text/html"),
             };
